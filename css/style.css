@@ -1,4 +1,84 @@
-:root{}
+:root{
+  --primary-hue: 200;
+  --secondary-hue: 300;
+  --neutral-hue: 0;
+  --accent-hue: 100;
+  --text-primary-hue: 0;
+  --text-invert-hue: 0;
+
+
+  --bg-alpha: 1;
+  --text-alpha: 1;
+
+  --color-bg-primary-light: var(--primary-hue) 100% 100%;
+  --color-bg-primary: var(--primary-hue) 100% 50%;
+  --color-bg-primary-dark: var(--primary-hue) 100% 30%;
+
+  --color-bg-secondary-light: var(--secondary-hue) 100% 100%;
+  --color-bg-secondary: var(--secondary-hue) 100% 50%;
+  --color-bg-secondary-dark: var(--secondary-hue) 100% 30%;
+
+  --color-bg-neutral-light: var(--neutral-hue) 100% 100%;
+  --color-bg-neutral: var(--neutral-hue) 100% 50%;
+  --color-bg-neutral-dark: var(--neutral-hue) 100% 30%;
+
+  --color-bg-accent-light: var(--accent-hue) 100% 100%;
+  --color-bg-accent: var(--accent-hue) 100% 50%;
+  --color-bg-accent-dark: var(--accent-hue) 100% 30%;
+
+  --color-bg-white: 0 0% 100%;
+
+  --color-text-primary: var(--text-primary-hue) 0% 0%;
+  --color-text-invert: var(--text-invert-hue) 100% 100%;
+
+  --font-family-body: 'Roboto', sans-serif;
+  --font-family-header: 'Roboto', sans-serif;
+
+  --font-2xs: 75%;
+  --font-xs: 85%;
+  --font-sm: 95%;
+  --font-md: 100%;
+  --font-lg: 110%;
+  --font-xl: 120%;
+  --font-2xl: 130%;
+  --font-3xl: 150%;
+  --font-4xl: 200%;
+  
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --spacing-2xs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+  --spacing-4xl: 8rem;
+
+  --line-height-header: 1.25;
+  --line-height-body: 1.5;
+
+  --border-radius: 0.25rem;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: var(--color-bg-neutral);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease-in-out;
+
+  --max-width: 1200px;
+}
 
 /* CSS Reset */
 /* Box sizing rules */
@@ -78,7 +158,99 @@ textarea:not([rows]) {
 /* Component */
 
 /* Utility */
+.wrapper{
+  max-width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+.flex {
+  display: flex;
+}
+.flex-between {
+  justify-content: space-between;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.bg__white {
+  background-color: hsla(var(--color-bg-white), var(--bg-alpha));
+}
 
 /* Block */
+/* Banner */
+.banner{}
+.offer__banner{}
+.logo__banner{}
+
+/* Hero */
+.hero{}
+.hero h1{}
+.hero h4{}
+.hero .img__container{}
+.hero .img__title{}
+
+/* Forms */
+/* Body Form */
+.body__form{}
+.body__form h4{}
+.body__form .klaviyo__form{}
+
+/* Banner Form */
+.banner__form{}
+.banner__form .klaviyo__form{}
+
+/* Features */
+.features{}
+.features h2{}
+.features p{}
+.features img{}
+
+/* Guide */
+.guide{}
+.guide .header__emphasis{}
+.guide p{}
+.guide ul{}
+.guide ul li{}
+.guide .science{}
+.guide .science img{}
+.guide .convenience{}
+.guide .convenience img{}
+.guide .ingredients{}
+.guide .ingredients img{}
+.guide .quality{}
+.guide .sample{}
+
+/* Authority */
+.authority{}
+.authority h2{}
+.authority p{}
+.authority img{}
+.authority ul{}
+.authority ul li{}
+
+/* Reviews */
+.reviews{}
+.reviews h2{}
+.reviews .reviews__container{}
+.reviews .reviews__card{}
+.reviews .reviews__img{}
+.reviews .reviews__body{}
+.reviews .reviews__author{}
+.reviews .star__container{}
+.reviews .star__container i{}
+
+/* Offer */
+.offer{}
+.offer .terms__links{}
+.offer .offer__wrapper{}
+.offer .offer__wrapper .offer__card{}
+.offer h3{}
+.offer p{}
+.offer .offer__body{}
+.offer .offer__body .offer__img{}
+.offer .offer__body .offer__benenfits{}
+
 
 /* Exception */
