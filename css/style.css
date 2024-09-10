@@ -230,6 +230,9 @@ textarea:not([rows]) {
 .hero .img__container img{
   border-radius: var(--border-radius);
 }
+.hero .img__container:nth-of-type(1) img{
+    filter: grayscale(100%) sepia(01) hue-rotate(190deg) brightness(55%) saturate(200%) contrast(140%);  
+}
 .hero .img__title{
   position: absolute;
   top: 2rem;
@@ -242,10 +245,30 @@ textarea:not([rows]) {
   font-weight: var(--font-weight-light);
   line-height: .8;
   text-align: center;
+  z-index: 10;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .hero .img__title>span{
   font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
+}
+.hero .hero__offer-badge{
+  text-transform: capitalize;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 45%;
+  left: 80%;
+  transform: translateX(-50%);
+  font-size: var(--font-lg);
+  padding: 0.4rem;
+  background-color: hsla(var(--color-bg-primary-dark), var(--bg-alpha));
+  z-index: 20;
+  border: 2px solid white;
+  box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  font-family: var(--font-family-special);
+  text-align: center;
 }
 .hero h4{
   max-width: 750px;
@@ -572,6 +595,24 @@ textarea:not([rows]) {
     display: none;
   }
 
+  .hero .hero__offer-badge{
+    text-transform: capitalize;
+    position: absolute;
+    height: 165px;
+    width: 165px;
+    top: 20%;
+    left: 60%;
+    transform: translateX(-50%);
+    font-size: var(--font-3xl);
+    padding: 2rem;
+    background-color: hsla(var(--color-bg-primary-dark), var(--bg-alpha));
+    z-index: 20;
+    border: 2px solid white;
+    box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    font-family: var(--font-family-special);
+    text-align: center;
+  }
   .logo__banner>div{
     justify-content: space-between;
   }
