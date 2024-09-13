@@ -32,6 +32,8 @@
 
   --color-text-primary: var(--text-primary-hue), 0%, 0%;
   --color-text-invert: var(--text-invert-hue), 100%, 100%;
+  
+  --color-star: 50, 100%, 50%;
 
   --font-family-body: 'Roboto', sans-serif;
   --font-family-header: 'Roboto', sans-serif;
@@ -201,11 +203,19 @@ textarea:not([rows]) {
 }
 .logo__banner{
   background-color: hsla(var(--color-bg-primary-light), var(--bg-alpha));
+  padding-block: .25rem;
 }
 .logo__banner>div{
   justify-content: center;
 }
-
+#natural, #phone{
+  align-items: center;
+  gap: .25rem;
+}
+#phone{
+  text-decoration: none;
+  color: hsla(var(--color-text-invert), var(--text-alpha));
+}
 /* Hero */
 .hero{
   background-color: hsla(var(--color-bg-primary), var(--bg-alpha));
@@ -231,7 +241,7 @@ textarea:not([rows]) {
   border-radius: var(--border-radius);
 }
 .hero .img__container:nth-of-type(1) img{
-    filter: grayscale(100%) sepia(01) hue-rotate(190deg) brightness(55%) saturate(200%) contrast(140%);  
+    filter: grayscale(100%) sepia(01) hue-rotate(190deg) brightness(55%) saturate(150%) contrast(140%);  
 }
 .hero .img__title{
   position: absolute;
@@ -302,7 +312,7 @@ textarea:not([rows]) {
   background-color: hsla(223, 65%, 35%, 0.9);
   height: var(--banner-offset);
   display: none;
-  
+  z-index: 10;
 }
 .banner__form .klaviyo__form{}
 
@@ -334,6 +344,9 @@ textarea:not([rows]) {
 .features img{
   border-radius: var(--border-radius);
   margin-bottom: 2rem;
+}
+.features .feature__img{
+  filter: grayscale(100%) sepia(01) hue-rotate(190deg) brightness(60%) saturate(150%) contrast(180%); 
 }
 
 /* Guide */
@@ -487,6 +500,9 @@ textarea:not([rows]) {
   flex-shrink: 0;
   transform: translateY(1.5rem);
 }
+.reviews .review__img i{
+  font-size: var(--font-5xl);
+}
 .reviews .review__body{
   display: flex;
   flex-direction: column;
@@ -500,6 +516,9 @@ textarea:not([rows]) {
 .reviews .star__container{
   display: flex;
   gap: .5rem;
+}
+.reviews .star__container i{
+  color: hsla(var(--color-star), 1);
 }
 
 /* Offer */
@@ -565,6 +584,7 @@ textarea:not([rows]) {
 }
 .offer .offer__body .offer__img img{
   margin: 2rem auto;
+  border-radius: var(--border-radius);
 }
 .offer .offer__body .offer__benefits{
   margin-block: 1rem;
@@ -600,8 +620,8 @@ textarea:not([rows]) {
     position: absolute;
     height: 165px;
     width: 165px;
-    top: 20%;
-    left: 60%;
+    top: 28%;
+    left: 65%;
     transform: translateX(-50%);
     font-size: var(--font-3xl);
     padding: 2rem;
