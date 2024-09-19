@@ -229,10 +229,11 @@ textarea:not([rows]) {
   padding: 0;
 }
 .hero h1{
-  font-size: var(--font-6xl);
+  font-size: var(--font-5xl);
   font-family: var(--font-family-body);
   text-align: center;
   margin: 2rem 0 1rem 0;
+  text-transform: capitalize;
 }
 .hero .img__container{
   position: relative;
@@ -618,8 +619,8 @@ textarea:not([rows]) {
   .hero .hero__offer-badge{
     text-transform: capitalize;
     position: absolute;
-    height: 165px;
-    width: 165px;
+    height: 172px;
+    width: 172px;
     top: 28%;
     left: 65%;
     transform: translateX(-50%);
