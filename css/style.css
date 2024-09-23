@@ -91,7 +91,7 @@
   --transition-timing-function: ease-in-out;
 
   --max-width: 750px;
-  --banner-offset: 50px;
+  --banner-offset: 100px;
 }
 
 /* CSS Reset */
@@ -620,7 +620,6 @@ textarea:not([rows]) {
   background: hsla(var(--color-bg-primary-light), var(--bg-alpha));
   color: hsla(var(--color-text-invert), var(--text-alpha));
   font-family: var(--font-family-special);
-  padding-bottom: var(--banner-offset);
 }
 .offer > .flex {
   flex-direction: column;
@@ -687,6 +686,29 @@ textarea:not([rows]) {
 .offer .offer__body .offer__benefits {
   margin-block: 1rem;
   list-style-type: disc;
+}
+
+/* Footer */
+footer {
+  background-color: hsla(var(--color-bg-primary), var(--bg-alpha));
+  color: hsla(var(--color-text-invert), var(--text-alpha));
+  font-family: var(--font-family-special);
+  padding-block: var(--spacing-sm);
+  padding-bottom: var(--banner-offset);
+}
+footer .flex {
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto;
+  gap: .5rem;
+  text-align: center;
+}
+footer .footer__phone{
+  color: hsla(var(--color-bg-primary-light), var(--bg-alpha));
+}
+footer .footer__fda {
+  border: 1px solid hsla(var(--color-bg-primary-light), var(--bg-alpha));
+  padding: .5rem;
 }
 
 /* Exception */
